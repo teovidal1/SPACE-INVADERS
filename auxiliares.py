@@ -9,6 +9,7 @@ def salir_juego():
     pygame.quit()
     exit()
 
+
 def validar_fin_juego(boss_creado:bool, grupo_boss:Group, player_group:Group) -> str:
     """
     Valida el fin del juego

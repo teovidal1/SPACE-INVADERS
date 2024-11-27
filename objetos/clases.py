@@ -163,5 +163,3 @@ class Vida(pygame.sprite.Sprite):
         self.image = imagen_corazon
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
-
-    

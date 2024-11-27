@@ -11,11 +11,13 @@ def disparar_cohetes (player, grupo_cohetes:Group, ultimo_disparo:dict):
    grupo_cohetes.add(cohete)
    ultimo_disparo["cohete"] = pygame.time.get_ticks()
 
+
 def disparar_bala_simple(player, grupo_balas:Group, ultimo_disparo:dict):
    disparo_fx.play(0)
    bala = Bala(player.x, player.y)
    grupo_balas.add(bala)
    ultimo_disparo["bala_simple"] = pygame.time.get_ticks()
+
 
 def enemigos_disparar(grupo_enemigos:Group, grupo_balas_enemigas:Group):
    for enemigo in grupo_enemigos:

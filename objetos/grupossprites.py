@@ -71,18 +71,20 @@ def calcular_colisiones_grupos (grupo_balas: Group, grupo_enemigos: Group,
       explosion_fx.play(0)
       explosion = Explosion(player.x, player.y)
       grupo_explosiones.add(explosion)
-      
+
+
 def actualizar_grupos(grupos: list[Group]):
    """Actualiza con UPDATE todos los grupos de sprites en la ventana."""
    for grupo in grupos:
       grupo.update()
+
 
 def dibujar_grupos(grupos: list[Group], ventana):
    """Dibuja todos los grupos de sprites en la ventana."""
    for grupo in grupos:
       grupo.draw(ventana)
 
-      
+
 def crear_boss(grupo_boss: Group):
    boss_final = JefeFinal(ANCHO_VENTANA//2, LARGO_VENTANA*0.15)
    grupo_boss.add(boss_final)

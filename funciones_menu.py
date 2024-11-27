@@ -130,6 +130,7 @@ def juego() -> None:
                     jugadores[indice_jugador]["victorias"] += 1 
                     jugadores[indice_jugador]["partidas jugadas"] += 1
                     bandera_actualizacion_stats = True
+                    
                     for i in range(len(jugadores)):
                             if jugadores[indice_jugador]["victorias"] > jugadores[i]["victorias"]:
                                 jugadores[indice_jugador], jugadores[i] = jugadores[i], jugadores[indice_jugador] 
@@ -139,6 +140,7 @@ def juego() -> None:
 
         reloj.tick(FPS)
         pygame.display.update()
+
 
 def main_menu() -> None:
     """
@@ -313,7 +315,7 @@ def dibujar_boton_y_ejecutar(texto:str, rect: pygame.Rect, color: tuple[int, int
     
     return colision_mouse_rectangulo
 
-    
+
 def mostrar_texto(superficie: pygame.surface, texto: str, fuente: pygame.font.Font, posicion: tuple[int, int], color: tuple[int, int, int], color_fondo: tuple[int, int, int] = None) -> None:
     """
     Muestra texto en pantalla
