@@ -20,12 +20,18 @@ def disparar_bala_simple(player, grupo_balas:Group, ultimo_disparo:dict):
 
 
 def enemigos_disparar(grupo_enemigos:Group, grupo_balas_enemigas:Group):
+   """Llama al método disparar de cada enemigo en pantalla
+
+   Args:
+      grupo_enemigos (Group): Grupo de sprites naves
+      grupo_balas_enemigas (Group): Grupo de sprites balas enemigas
+   """
    for enemigo in grupo_enemigos:
             enemigo.disparar(grupo_balas_enemigas)
 
 
 def movimiento(VELOCIDAD_PERSONAJE:int, ANCHO_VENTANA:int,
-               TAMANIO_PERSONAJE:int, player:Naves,keys):
+               TAMANIO_PERSONAJE:int, player:Nave,keys):
    
    if (keys[pygame.K_LEFT] or keys[pygame.K_a]) and player.x > 0 + TAMANIO_PERSONAJE: 
       player.x -= VELOCIDAD_PERSONAJE

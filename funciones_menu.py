@@ -23,7 +23,6 @@ pygame.display.set_caption(NOMBRE_VENTANA)
 #Cargamos música
 pygame.mixer.music.load(path_musica_menu)
 jugadores = cargar_usuarios()
-
 musica_sonando = True
 
 def juego() -> None:
@@ -54,7 +53,7 @@ def juego() -> None:
     grupos = [grupo_cohetes, grupo_enemigos, grupo_balas_enemigas, player_group, grupo_balas, grupo_vidas, grupo_explosiones, grupo_boss]
     #Meter todos los grupos que haya, siempre.
 
-    player = Naves(ANCHO_VENTANA // 2, LARGO_VENTANA * 0.85)
+    player = Nave(ANCHO_VENTANA // 2, LARGO_VENTANA * 0.85)
     player_group.add(player)
     crear_enemigos(grupo_enemigos)
     player.actualizar_vidas(grupo_vidas)
@@ -130,7 +129,7 @@ def juego() -> None:
                     jugadores[indice_jugador]["victorias"] += 1 
                     jugadores[indice_jugador]["partidas jugadas"] += 1
                     bandera_actualizacion_stats = True
-                    
+
                     for i in range(len(jugadores)):
                             if jugadores[indice_jugador]["victorias"] > jugadores[i]["victorias"]:
                                 jugadores[indice_jugador], jugadores[i] = jugadores[i], jugadores[indice_jugador] 

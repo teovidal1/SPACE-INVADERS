@@ -5,13 +5,13 @@
         "partidas jugadas": 6
     },
     {
+        "nombre": "Teo",
+        "victorias": 4,
+        "partidas jugadas": 15
+    },
+    {
         "nombre": "Romina",
         "victorias": 1,
         "partidas jugadas": 1
-    },
-    {
-        "nombre": "Teo",
-        "victorias": 3,
-        "partidas jugadas": 13
     }
 ]

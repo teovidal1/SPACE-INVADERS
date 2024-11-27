@@ -31,7 +31,7 @@ class Cohete(Bala):
         self.velocidad = VELOCIDAD_COHETE_JUGADOR
 
 
-class Naves(pygame.sprite.Sprite):
+class Nave(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
         self.image = imagen_nave

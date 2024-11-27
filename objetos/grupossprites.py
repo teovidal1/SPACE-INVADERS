@@ -22,9 +22,21 @@ def crear_enemigos(grupo_enemigos: Group):
 
 def calcular_colisiones_grupos (grupo_balas: Group, grupo_enemigos: Group,
                         grupo_balas_enemigas: Group, player_group: Group,
-                        grupo_cohetes: Group, player: Naves, grupo_vidas: Group,
+                        grupo_cohetes: Group, player: Nave, grupo_vidas: Group,
                         grupo_explosiones: Group, grupo_boss:Group) -> None:
+   """Busca las colisiones entre los distintos grupos de sprites y mata los sprites cuando es necesario, y llama métodos de otros cuando es necesario según convenga
 
+   Args:
+      grupo_balas (Group): Grupo sprites clase Balas
+      grupo_enemigos (Group): Grupo sprites clase NavesEnemigas
+      grupo_balas_enemigas (Group): Grupo sprites clase BalasEnemigas
+      player_group (Group): Grupo sprites jugador
+      grupo_cohetes (Group): Grupo sprites clase Cohetes
+      player (Nave): Grupo sprites clase Nave
+      grupo_vidas (Group): Grupo sprites clase Vidas
+      grupo_explosiones (Group): Grupo sprites clase Explosiones
+      grupo_boss (Group): Grupo sprites clase JefeFinal
+   """
    pygame.sprite.groupcollide(grupo_balas, grupo_balas_enemigas, True, True)
    
    if pygame.sprite.groupcollide(grupo_balas_enemigas , player_group, True, False): #Colisión entre balas enemigas y jugador
@@ -86,5 +98,9 @@ def dibujar_grupos(grupos: list[Group], ventana):
 
 
 def crear_boss(grupo_boss: Group):
+   """Crea una instancia de JefeFinal
+   Args:
+      grupo_boss (Group): Grupo de sprites
+   """
    boss_final = JefeFinal(ANCHO_VENTANA//2, LARGO_VENTANA*0.15)
    grupo_boss.add(boss_final)
