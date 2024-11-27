@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Fernando",
+        "victorias": 4,
+        "partidas jugadas": 6
+    },
+    {
+        "nombre": "Teo",
+        "victorias": 2,
+        "partidas jugadas": 12
+    },
+    {
+        "nombre": "Romina",
+        "victorias": 1,
+        "partidas jugadas": 1
+    }
+]
