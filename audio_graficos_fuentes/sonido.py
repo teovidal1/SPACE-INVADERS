@@ -1,5 +1,5 @@
 import pygame
-from config import *
+from configuracion import *
 
 disparo_fx = pygame.mixer.Sound("assets/sonidos/DisparoJugador.wav")
 disparo_fx.set_volume(0.2)

@@ -1,5 +1,5 @@
 import pygame
-from config import *
+from configuracion import *
 pygame.init()
 
 #Icono.

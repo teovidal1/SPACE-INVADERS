@@ -1,11 +1,18 @@
 import pygame
-from config import *
+from configuracion import *
 from audio_graficos_fuentes.graficos import *
 from objetos.clases import *
 from pygame.sprite import Group
 
 
 def disparar_cohetes (player, grupo_cohetes:Group, ultimo_disparo:dict):
+   """Crea una instancia Cohete en la posicion del jugador.
+
+   Args:
+      player (_type_): Nave
+      grupo_cohetes (Group): Group
+      ultimo_disparo (dict): Dict["str":int]
+   """
    disparo_cohete_fx.play(0)
    cohete = Cohete(player.x, player.y)
    grupo_cohetes.add(cohete)
@@ -13,6 +20,13 @@ def disparar_cohetes (player, grupo_cohetes:Group, ultimo_disparo:dict):
 
 
 def disparar_bala_simple(player, grupo_balas:Group, ultimo_disparo:dict):
+   """Crea una instancia Bala en la posicion del jugador.
+
+   Args:
+      player (_type_): Nave
+      grupo_balas (Group): Group
+      ultimo_disparo (dict): Dict["str":int]
+   """
    disparo_fx.play(0)
    bala = Bala(player.x, player.y)
    grupo_balas.add(bala)

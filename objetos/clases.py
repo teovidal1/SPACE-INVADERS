@@ -1,6 +1,6 @@
 import pygame
 from pygame.sprite import Group
-from config import *
+from configuracion import *
 from audio_graficos_fuentes.graficos import *
 from audio_graficos_fuentes.sonido import *
 import random 
@@ -29,7 +29,6 @@ class Cohete(Bala):
         super().__init__(x, y)
         self.image = imagen_cohete
         self.velocidad = VELOCIDAD_COHETE_JUGADOR
-
 
 class Nave(pygame.sprite.Sprite):
     def __init__(self, x, y):

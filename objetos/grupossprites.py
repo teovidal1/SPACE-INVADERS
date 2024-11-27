@@ -1,5 +1,5 @@
 import pygame
-from config import *
+from configuracion import *
 from objetos.clases import *
 from pygame.sprite import Group
 

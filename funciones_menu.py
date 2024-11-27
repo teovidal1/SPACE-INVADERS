@@ -1,6 +1,6 @@
 import pygame
 from pygame.sprite import Group
-from config import *
+from configuracion import *
 from objetos.clases import *
 from objetos.grupossprites import *
 from audio_graficos_fuentes.graficos import *
@@ -10,16 +10,16 @@ from objetos.movimientoydisparo import *
 from auxiliares import *
 from funciones_usuarios import *
 
-
 #Inicializamos pygame
 pygame.init()
 #Creamos un reloj para controlar los ticks del juego
 reloj = pygame.time.Clock()
 #Creamos la ventana del juego
+
 ventana = pygame.display.set_mode(DIMENSION_PANTALLA)
-pygame.RESIZABLE 
 pygame.display.set_icon(icono) 
 pygame.display.set_caption(NOMBRE_VENTANA)
+
 #Cargamos música
 pygame.mixer.music.load(path_musica_menu)
 jugadores = cargar_usuarios()
@@ -159,8 +159,8 @@ def main_menu() -> None:
         x_background_text = (ANCHO_VENTANA // 2) - ((background_titulo.get_width()) // 2)
         blitear_fondo(background_menu) 
         ventana.blit(background_titulo,(x_background_text,60))
-        
         mouse_sobre_boton = False
+
         #Si el usuario cierra la ventana, se finaliza el programa.
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -173,7 +173,8 @@ def main_menu() -> None:
                     else:
                         pygame.mixer.music.unpause()
                     musica_sonando = not musica_sonando
-        fuente_silenciar= pygame.font.SysFont("Arial", 20,0,True)
+
+        fuente_silenciar= pygame.font.SysFont("Arial", 20,False,True)
         mostrar_texto(ventana, "Pulsa [M] para silenciar la música.", fuente_silenciar, (ANCHO_VENTANA // 2,LARGO_VENTANA - 20), ROJO)
         if dibujar_boton_y_ejecutar("COMENZAR", pygame.Rect((CENTRO_VENTANA[0] - ANCHO_BOTON-25), (500), ANCHO_BOTON, 50), AMARILLO, ROJO, juego):
             mouse_sobre_boton = True

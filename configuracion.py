@@ -14,7 +14,7 @@ FPS = 60 #Fotogramas por Segundo
 ANCHO_BOTON = 275
 LARGO_BOTON = 100
 
-#COLORES
+#COLORES en RGB
 ROJO = (255,0,0)
 VERDE = (0, 255, 0)
 AZUL = (0, 0, 255)
